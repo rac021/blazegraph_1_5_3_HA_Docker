@@ -2,7 +2,7 @@ MYID=$1
 ZK=$2
  
 HOSTNAME=`hostname`
-IPADDRESS=`ip -4 addr show scope global dev eth0 | grep inet | awk '{print \$2}' | cut -d / -f 1`
+IPADDRESS=`/sbin/ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'`
 cd /tmp/zookeeper
  
 if [ -n "$ZK" ] 
