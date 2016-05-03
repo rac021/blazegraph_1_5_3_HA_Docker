@@ -17,7 +17,7 @@ then
   /tmp/zookeeper/bin/zkCli.sh -server $ZK:2181 reconfig -add "server.$MYID=$IPADDRESS:2888:3888:participant;2181"
   echo " + Shutdown zookeeper..."
   /tmp/zookeeper/bin/zkServer.sh stop
-  sleep 2
+  sleep 3
   ZOO_LOG_DIR=/var/log ZOO_LOG4J_PROP='INFO,CONSOLE,ROLLINGFILE' 
   echo " ++ Strting zookeeper..."
   /tmp/zookeeper/bin/zkServer.sh start-foreground
