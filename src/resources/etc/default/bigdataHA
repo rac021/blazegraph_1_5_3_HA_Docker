@@ -61,6 +61,8 @@ export GROUPS="$FEDNAME"
 #export JETTY_XML=var/jetty/WEB-INF/jetty.xml
 #export JETTY_RESOURCE_BASE=var/jetty
 #export WRITE_CACHE_BUFFER_COUNT=2000
+#By Rac021
+export WRITE_CACHE_BUFFER_COUNT=6
 #export DATA_DIR=
 #export HALOG_DIR=
 #export SNAPSHOT_DIR=
